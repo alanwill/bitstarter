@@ -5,7 +5,7 @@ var app = express.createServer(express.logger());
 
 var buffer = new Buffer(16);
 
-fs.readFile('index.html', "utf-8", function (err, data) {
+fs.readFileSync('index.html', "utf-8", function (err, data) {
   if (err) throw err;
   response.send(data.toString());
 });
